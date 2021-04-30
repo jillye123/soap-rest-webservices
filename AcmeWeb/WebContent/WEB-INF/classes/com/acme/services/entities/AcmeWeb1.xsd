@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="lineitem" type="lineItem"/>
+
+  <xs:element name="order" type="order"/>
+
+  <xs:element name="order_list" type="orderList"/>
+
+  <xs:element name="quote_request" type="quoteRequest"/>
+
+  <xs:element name="quote_response" type="quoteResponse"/>
+
+  <xs:complexType name="quoteRequest">
+    <xs:sequence>
+      <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+      <xs:element name="dateRequiredBy" type="xs:string" minOccurs="0"/>
+      <xs:element name="partNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="order">
+    <xs:sequence>
+      <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+      <xs:element name="expectedShipDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="item" type="lineItem" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="orderId" type="xs:long"/>
+      <xs:element name="orderTotal" type="xs:double"/>
+      <xs:element name="status" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="lineItem">
+    <xs:sequence>
+      <xs:element name="partNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="quoteResponse">
+    <xs:sequence>
+      <xs:element name="clientId" type="xs:string" minOccurs="0"/>
+      <xs:element name="dateRequiredBy" type="xs:string" minOccurs="0"/>
+      <xs:element name="partNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="productAvailable" type="xs:boolean"/>
+      <xs:element name="quantity" type="xs:int"/>
+      <xs:element name="totalPrice" type="xs:double"/>
+      <xs:element name="unitPrice" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="orderList">
+    <xs:sequence>
+      <xs:element ref="order" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
