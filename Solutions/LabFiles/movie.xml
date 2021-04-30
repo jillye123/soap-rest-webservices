@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<m:database xmlns:m="http://www.mycom.com/movie">
+	<movie title="Preaching to the Choir" rating="PG13">
+		<description>
+		Two estranged brothers -- one a hip-hop star and the other a 
+		Baptist preacher -- find a way 
+		to make amends and help one another out as 
+		they each face a crisis in their lives.
+		</description>
+		<actor>Billoah Greene</actor>
+		<actor>Novella Nelson</actor>
+	</movie>
+	<movie title="Kekexili: Mountain Patrol" rating="PG13">
+		<description>
+		A moving true story about volunteers protecting antelope against 
+		poachers in the severe mountains of Tibet.
+		</description>
+		<actor>Zhang Lei</actor>
+		<actor>Qi Liang</actor>
+	</movie>
+</m:database>
+
+<!-- Contains some copyrigthed material from imdb.com -->
