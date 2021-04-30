@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions name="BillingManagerService" targetNamespace="http://billing.webage.com/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://billing.webage.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://billing.webage.com/" schemaLocation="BillingManagerService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="addAccount">
+    <part element="tns:addAccount" name="parameters">
+    </part>
+  </message>
+  <message name="addAccountResponse">
+    <part element="tns:addAccountResponse" name="parameters">
+    </part>
+  </message>
+  <portType name="BillingManager">
+    <operation name="addAccount">
+      <input message="tns:addAccount">
+    </input>
+      <output message="tns:addAccountResponse">
+    </output>
+    </operation>
+  </portType>
+  <binding name="BillingManagerPortBinding" type="tns:BillingManager">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="addAccount">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="BillingManagerService">
+    <port binding="tns:BillingManagerPortBinding" name="BillingManagerPort">
+      <soap:address location="http://localhost:9080/BillingWeb/BillingManagerService"/>
+    </port>
+  </service>
+</definitions>

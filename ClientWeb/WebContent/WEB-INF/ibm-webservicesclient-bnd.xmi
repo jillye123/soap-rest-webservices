@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscbnd:ClientBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscbnd="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscbnd.xmi" xmi:id="ClientBinding_1251220912937">
+  <serviceRefs xmi:id="ServiceRef_1251220912937" serviceRefLink="service/BillingManagerService">
+    <portQnameBindings xmi:id="PortQnameBinding_1251220912937" portQnameNamespaceLink="http://billing.webage.com/" portQnameLocalNameLink="BillingManagerPort" overriddenEndpointURI="http://localhost:9080/BillingWeb/BillingManagerService"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscbnd:ClientBinding>

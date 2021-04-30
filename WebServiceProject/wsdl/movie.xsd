@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.mycom.com/movie" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:m="http://www.mycom.com/movie">
+
+    <complexType name="movieType">
+    	<sequence>
+    		<element name="description" type="string"></element>
+    		<element name="actor" type="string" maxOccurs="unbounded"
+    			minOccurs="1">
+    		</element>
+    	</sequence>
+    	<attribute name="title" type="string"></attribute>
+    	<attribute name="rating" type="string"></attribute>
+    </complexType>
+
+    <element name="database">
+    	<complexType>
+    		<sequence>
+    			<element name="movie" type="m:movieType" maxOccurs="unbounded" minOccurs="1"></element>
+    		</sequence>
+    	</complexType>
+    </element>
+</schema>

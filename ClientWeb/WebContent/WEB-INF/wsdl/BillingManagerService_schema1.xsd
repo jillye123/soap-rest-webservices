@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://billing.webage.com/" version="1.0" xmlns:tns="http://billing.webage.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="addAccount" type="tns:addAccount"/>
+
+  <xs:element name="addAccountResponse" type="tns:addAccountResponse"/>
+
+  <xs:complexType name="addAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="account" type="tns:customerAccount"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customerAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
